@@ -62,7 +62,8 @@ function assign(ta) {
 
 		if (computed.maxHeight !== 'none' && newHeight > parseFloat(computed.maxHeight)) {
 			if (computed.overflowY === 'hidden') {
-				ta.style.overflow = 'scroll';
+				ta.style.overflowY = 'scroll';
+				ta.style.overflowX = 'hidden';
 			}
 			newHeight = parseFloat(computed.maxHeight);
 		} else if (computed.overflowY !== 'hidden') {
